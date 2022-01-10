@@ -4,6 +4,9 @@ Some productivity tools
 
 # DependFGUI
 
+## EXE 可运行程序
+[点击下载](./EXE/dependFGUI.rar)
+
 ## fgui快速接入到一个laya实例项目中
 1. 以通过测试实测
 测试案例:
