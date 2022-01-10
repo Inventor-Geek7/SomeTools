@@ -1,0 +1,386 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="FairyGUI是一个跨引擎的开源UI解决方案，它包含一个出色的的UI编辑器，以及多个流行游戏引擎的运行库。包括Unity, Unreal, Cocos2dx, CryEngine, MonoGame, Havok Vision, Starling, Egret, LayaAir, CocosCreator, Haxe, PIXI, Solar2D, ThreeJS等。">
+    <meta name="keywords" content="FairyGUI,FGUI">
+    <style type="text/css" rel="prefetch">
+        .hljs-comment,
+        .hljs-quote {
+            color: #8e908c
+        }
+
+        .hljs-deletion,
+        .hljs-name,
+        .hljs-regexp,
+        .hljs-selector-class,
+        .hljs-selector-id,
+        .hljs-tag,
+        .hljs-template-variable,
+        .hljs-variable {
+            color: #c82829
+        }
+
+        .hljs-built_in,
+        .hljs-builtin-name,
+        .hljs-link,
+        .hljs-literal,
+        .hljs-meta,
+        .hljs-number,
+        .hljs-params,
+        .hljs-type {
+            color: #f5871f
+        }
+
+        .hljs-attribute {
+            color: #eab700
+        }
+
+        .hljs-addition,
+        .hljs-bullet,
+        .hljs-string,
+        .hljs-symbol {
+            color: #718c00
+        }
+
+        .hljs-section,
+        .hljs-title {
+            color: #4271ae
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #8959a8
+        }
+
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            background: #fff;
+            color: #4d4d4c;
+            padding: .5em
+        }
+
+        .hljs-emphasis {
+            font-style: italic
+        }
+
+        .hljs-strong {
+            font-weight: 700
+        }
+
+        .docs[data-v-593b7aa2] {
+            position: relative
+        }
+
+        .docs[data-v-593b7aa2]:after {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            background: linear-gradient(180deg, #e9e9e9, #fff);
+            content: "";
+            display: flex
+        }
+
+        .docs .container[data-v-593b7aa2] {
+            display: flex;
+            padding-top: 80px;
+            padding-bottom: 60px;
+            position: relative;
+            z-index: 50
+        }
+
+        .docs .container nav[data-v-593b7aa2] {
+            width: 250px
+        }
+
+        .docs .container nav .nav-title[data-v-593b7aa2] {
+            display: none
+        }
+
+        .docs .container nav .page-title[data-v-593b7aa2] {
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            margin-bottom: 40px
+        }
+
+        .docs .container nav .page-title h1[data-v-593b7aa2] {
+            margin: 0
+        }
+
+        .docs .container nav .page-title .iconfont[data-v-593b7aa2] {
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--p)
+        }
+
+        .docs .container nav .category a[data-v-593b7aa2] {
+            display: block;
+            padding: 9px 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            background: rgba(255, 151, 26, .15);
+            color: var(--p);
+            font-weight: 700;
+            text-decoration: none
+        }
+
+        .docs .container nav .category a[data-v-593b7aa2]:hover {
+            background: rgba(255, 151, 26, .25)
+        }
+
+        .docs .container nav .category a.router-link-active[data-v-593b7aa2] {
+            background: var(--p);
+            color: #fff;
+            cursor: default
+        }
+
+        .docs .container nav .page-list[data-v-593b7aa2] {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 4px solid rgba(0, 0, 0, .05)
+        }
+
+        .docs .container nav .page-list .page-link[data-v-593b7aa2] {
+            margin-bottom: 7px
+        }
+
+        .docs .container nav .page-list .page-link>a[data-v-593b7aa2] {
+            font-size: 18px;
+            text-decoration: none;
+            color: #000
+        }
+
+        .docs .container nav .page-list .page-link>a.router-link-active[data-v-593b7aa2],
+        .docs .container nav .page-list .page-link>a[data-v-593b7aa2]:hover {
+            color: var(--p)
+        }
+
+        .docs .container nav .page-list h2[data-v-593b7aa2] {
+            margin-bottom: 12px;
+            margin-top: 30px
+        }
+
+        @media(max-width:680px) {
+            .docs .container nav[data-v-593b7aa2] {
+                width: 100%;
+                width: 100vw;
+                height: calc(100vh - 40px);
+                position: fixed;
+                left: 0;
+                bottom: calc(90px - 100vh);
+                display: flex;
+                flex-direction: column;
+                background: #fff;
+                border-radius: 16px 16px 0 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                transition: bottom .5s;
+                z-index: 100;
+                overflow: hidden
+            }
+
+            .docs .container nav .nav-title[data-v-593b7aa2] {
+                display: flex;
+                height: 50px;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+                align-items: center;
+                justify-content: center;
+                background: var(--p);
+                color: #fff
+            }
+
+            .docs .container nav .nav-title .icon[data-v-593b7aa2] {
+                margin-right: 6px;
+                display: block;
+                font-size: 24px;
+                transition: transform .3s
+            }
+
+            .docs .container nav .nav-title .toggle-btn[data-v-593b7aa2] {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 25px;
+                background: rgba(0, 0, 0, .07);
+                border-radius: 999px
+            }
+
+            .docs .container nav .nav-content[data-v-593b7aa2] {
+                height: 1%;
+                flex-grow: 1;
+                overflow-y: auto;
+                padding: 30px 20px
+            }
+
+            .docs .container nav.open[data-v-593b7aa2] {
+                bottom: 0;
+                z-index: 400
+            }
+
+            .docs .container nav.open .nav-title .icon[data-v-593b7aa2] {
+                transform: rotate(45deg)
+            }
+        }
+
+        .docs .container article[data-v-593b7aa2] {
+            width: 1%;
+            flex-grow: 1;
+            padding: 0 30px
+        }
+
+        .docs .container article .article-title[data-v-593b7aa2] {
+            font-size: 56px;
+            margin-top: 0;
+            line-height: 1.3
+        }
+
+        .docs .container article .content[data-v-593b7aa2] {
+            max-width: 720px;
+            margin: 0 auto
+        }
+
+        @media(max-width:680px) {
+            .docs .container article[data-v-593b7aa2] {
+                padding: 0
+            }
+        }
+
+        .nav-mask[data-v-593b7aa2] {
+            display: none
+        }
+
+        @media(max-width:680px) {
+            .nav-mask[data-v-593b7aa2] {
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 50;
+                background: rgba(0, 0, 0, .2)
+            }
+
+            .nav-mask.open[data-v-593b7aa2] {
+                display: block
+            }
+        }
+
+        .docs article img {
+            max-width: 100%
+        }
+
+        .docs article p {
+            font-size: 16px;
+            line-height: 1.8
+        }
+
+        .docs article p * {
+            vertical-align: middle
+        }
+
+        .docs article p a {
+            vertical-align: baseline
+        }
+
+        .docs article li {
+            margin-bottom: .5em
+        }
+
+        .docs article li code {
+            color: var(--p);
+            background: rgba(255, 151, 26, .1);
+            border-radius: 4px;
+            padding: 3px 5px
+        }
+
+        .docs article a {
+            color: var(--p);
+            font-weight: 700
+        }
+
+        .docs article code {
+            font-family: JetBrains Mono, monospace
+        }
+
+        .docs article pre {
+            background: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 15px 0
+        }
+
+        .docs article pre code {
+            background: none;
+            color: #444
+        }
+
+        .docs article h2 {
+            font-size: 36px;
+            margin-top: 1.3em
+        }
+
+        .docs article hr {
+            border: none;
+            border-bottom: 4px solid rgba(0, 0, 0, .06);
+            margin: 30px 0
+        }
+
+        @media(max-width:680px) {
+            .docs article * {
+                word-break: break-all
+            }
+        }
+
+        .docs #docs-toc .table-of-contents {
+            margin: 7px 0;
+            padding-left: 16px;
+            font-size: 14px
+        }
+
+        .docs #docs-toc .table-of-contents ul {
+            padding-left: 16px
+        }
+
+        .docs #docs-toc .table-of-contents li {
+            list-style: none;
+            margin-left: 0
+        }
+
+        .docs #docs-toc .table-of-contents li a {
+            text-decoration: none;
+            color: #000
+        }
+
+        .docs #docs-toc .table-of-contents li a:hover {
+            color: var(--p)
+        }
+    </style>
+    <title>LayaAir - 初始化FGUI | FairyGUI</title>
+</head>
+
+<body>
+    <ol>
+        <li>在程序启动时（或者在需要用到这些UI的适当地方）加载这两个文件，并完成初始化。</li>
+    </ol>
+    <pre class="hljs javascript"><code class="language-js">    onLoaded(): <span class="hljs-keyword">void</span> {
+        Laya.stage.addChild(fgui.GRoot.inst.displayObject);
+        
+        fgui.UIPackage.addPackage(<span class="hljs-string">"res/Basic"</span>);
+        fgui.UIConfig.defaultFont = <span class="hljs-string">"宋体"</span>;
+        fgui.UIConfig.verticalScrollBar = <span class="hljs-string">"ui://Basic/ScrollBar_VT"</span>;
+        fgui.UIConfig.horizontalScrollBar = <span class="hljs-string">"ui://Basic/ScrollBar_HZ"</span>;
+        fgui.UIConfig.popupMenu = <span class="hljs-string">"ui://Basic/PopupMenu"</span>;
+        fgui.UIConfig.buttonSound = <span class="hljs-string">"ui://Basic/click"</span>;
+    }
+</code></pre>
+</body>
+
+</html>
