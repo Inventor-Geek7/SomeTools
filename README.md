@@ -5,7 +5,7 @@ Some productivity tools
 # DependFGUI
 
 ## EXE 可运行程序
-[点击下载]([./EXE/dependFGUI.rar](https://github.com/Inventor-Geek7/SomeTools/raw/main/EXE/dependFGUI.rar))
+[点击下载](https://github.com/Inventor-Geek7/SomeTools/blob/main/EXE/dependFGUI.rar?raw=true)
 
 ## fgui快速接入到一个laya实例项目中
 1. 以通过测试实测
